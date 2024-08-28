@@ -1,8 +1,32 @@
 ![](https://media.licdn.com/dms/image/C5112AQEWnHcjZU5BtQ/article-cover_image-shrink_600_2000/0/1520208427114?e=2147483647&v=beta&t=Upx36sO5BJkxGGU58MBDXxqg1QmKYow5I5ac70DAb4E)
 
 # Preventive Maintenance using Anomaly detection
+## How to use this repository?
+There are 3 folders in this repository.
+ 1.   `Data`
+The Data folder contains the data set "vibration.csv". The data set is of the vibrations recorded from the machinery. The data set contains the following features:
+-   **X-Axis_DZ**: Vibration measured along the X-axis in the DZ plane.
+-   **Z-Axis_DZ**: Vibration measured along the Z-axis in the DZ plane.
+-   **X-Axis_CZ2**: Vibration measured along the X-axis in the CZ2 plane.
+-   **Z-Axis_CZ2**: Vibration measured along the Z-axis in the CZ2 plane.
+-   **X-Axis_DZ_LCL**: Lower control limit for vibration along the X-axis in the DZ plane.
+-   **X-Axis_DZ_UCL**: Upper control limit for vibration along the X-axis in the DZ plane.
+-   **Z-Axis_DZ_LCL**: Lower control limit for vibration along the Z-axis in the DZ plane.
+-   **Z-Axis_DZ_UCL**: Upper control limit for vibration along the Z-axis in the DZ plane.
+-   **X-Axis_CZ2_LCL**: Lower control limit for vibration along the X-axis in the CZ2 plane.
+-   **Date_time**: Time stamp of the record.
+ 
+ 3.   `Notebook` This the folder contains the python notebook for the code. The high-level structure view of the notebook/ code is as follows:
+ -   **Initializing set up**  - This includes importing necessary libraries and importing data-set.
+-   **Restructuring data**  - This includes applying transformations to the data set and features.
+-   **Windowing & Over-lapping**- This creates the small windows of the consecutive observations with overlapping to ensure that event at all the time stamps are taken into account.
+- **Feature Engineering**- This includes creation of new features which includes the statistical relevance to the problem e.g. mean, std, kurtosis, maxima & minima.
+-  **Constraint Engineering & Anomaly Detection**- This includes the calculating the constraint values for the engineered feature set, and identifying the anomalous data points. The use of Support Vector Machine (SVM) is done to estimate the anomalies. 
+-  **ML Model to training & testing**- This includes the training of the labeled data using Multivariate logistic regression and testing it to further fine tune it. 
+ 5.   `Dashboard` his folder includes the Power BI dashboard to provide the user an end-point to view and analyze the results in interactive manner.
 
-## Overview
+
+## Overview of the Notebook
 
 This project focuses on the use case of preventive maintenance for ADNOC (Abu Dhabi National Oil Company). The goal is to analyze vibration data collected from various axes of industrial machinery to identify potential issues before they lead to equipment failure. The project involves several key steps:
 
@@ -85,7 +109,5 @@ Copy code
 -   **Plots**: Includes time series plots with control limits, violin plots of statistical features, and scatter plots highlighting anomalies.
 -   **Classification Report**: Provides accuracy and detailed metrics for the logistic regression model.
 
-## Notes
-
--   Ensure that the DataFrame `df` contains the necessary columns for the analysis.
--   The classification section assumes that the DataFrame `final_df` contains the feature columns and an 'Anomaly_Label' for model training.
+## How  _Dashboard_  looks like?
+mock up will come here. 
