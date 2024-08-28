@@ -1,1 +1,11 @@
 
+fig, axs = plt.subplots(4, 1, figsize=(10, 20))
+
+# X-Axis_DZ Plot
+axs[0].plot(df['Date_time'], df['X-Axis_DZ'], label='X-Axis_DZ', color='blue')
+axs[0].plot(df['Date_time'], df['X-Axis_DZ_LCL'], label='X-Axis_DZ_LCL', color='red', linestyle='--')
+axs[0].plot(df['Date_time'], df['X-Axis_DZ_UCL'], label='X-Axis_DZ_UCL', color='green', linestyle='--')
+axs[0].set_title('X-Axis_DZ Vibration with Control Limits')
+axs[0].set_xlabel('Date_time')
+axs[0].set_ylabel('Vibration')
+axs[0].legend()
