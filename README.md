@@ -110,5 +110,4 @@ Copy code
 -   **Classification Report**: Provides accuracy and detailed metrics for the logistic regression model.
 
 ## How  _Dashboard_  looks like?
-mock up will come here. 
 ![](https://github.com/KPMGDAAI/Preventive_Maintenance/blob/main/03%20Dashboard/Preventive%20Maintenance%20Dashboard.JPG)
