@@ -111,3 +111,4 @@ Copy code
 
 ## How  _Dashboard_  looks like?
 mock up will come here. 
+![](https://github.com/KPMGDAAI/Preventive_Maintenance/blob/main/03%20Dashboard/Preventive%20Maintenance%20Dashboard.JPG)
